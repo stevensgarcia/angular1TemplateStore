@@ -1,0 +1,11 @@
+<div class="row">
+   <div ng-repeat="template in templates">
+      <div class="col-sm-4 text-center">
+         <h3>{{template.name}}</h3>
+         <img ng-src="img/{{template.images[0].name}}" class="img-responsive" style="margin: 0 auto; width: 70%;" alt=""/>
+         <h4>{{template.price | currency}}</h4>
+         <a class="btn btn-primary btn-block" style="width: 40%; margin: 0
+            auto;" href="#!/templates/{{template.id}}">Details</a>
+      </div>
+   </div>
+</div>

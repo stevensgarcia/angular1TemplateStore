@@ -1,0 +1,25 @@
+<div class="row">
+   <div class="col-md-12" style="margin: 24px 0;">
+      <a href="#!/templates">Go back &rarr;</a>
+   </div>
+   <div class="col-sm-4">
+      <img ng-src="img/{{mainImage}}" class="img-responsive" alt="">
+      <div class="row">
+         <!-- Render mini thubmnail images if any -->
+         <div ng-repeat="image in template.images | limitTo : 4">
+            <div class="col-md-3">
+               <img class="img-responsive" style="max-width: 100%; margin-top:
+               24px;" ng-src="img/{{image.name}}" ng-click="changeMainImage(image)"/>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="col-sm-8">
+      <h3>{{template.name}}</h3>
+      <p>{{template.description}}</p>
+      <h4 ng-bind="template.price"></h4>
+      <button class="btn btn-success">BUY NOW</button>
+   </div>
+</div>
+
